@@ -1,0 +1,102 @@
+{
+  "schema": "foldsense.demo.video.capture.v1",
+  "source_file_sha256": "0255eb3aa1e5c30f9d9c5e972ed5c9a6a627ba6d926784216ae9cdf5c36c77b1",
+  "method": "actual browser DOM rendered via Puppeteer and edited into frame compositions; generated original score",
+  "device": "macOS Chrome headless, not Samsung",
+  "screens": [
+    {
+      "name": "00-intro",
+      "sha256": "d4e03b02003dde10115e47113c98469fea616b77151b66e60607b8cf4dc66bf7",
+      "chapter": "Chapter 1 of 6  ·  0D learning lens",
+      "uiTitle": "Meet one building block",
+      "score": "0D: One note · 1 voice",
+      "tension": "0 / 100",
+      "distance": null,
+      "clip_type": "intro"
+    },
+    {
+      "name": "01-0d",
+      "sha256": "ccf38d9426168b92c696b2c4766312c0d36550a4dbc2d78039943fb58b16d075",
+      "chapter": "Chapter 1 of 6  ·  0D learning lens",
+      "uiTitle": "Meet one building block",
+      "score": "0D: One note · 1 voice",
+      "tension": "0 / 100",
+      "distance": null,
+      "clip_type": "chapter"
+    },
+    {
+      "name": "02-1d",
+      "sha256": "f23a3f6b016b2d9847f769a6e6da8d4491dffa07b5963012af7c631db647e852",
+      "chapter": "Chapter 2 of 6  ·  1D learning lens",
+      "uiTitle": "Connect a sequence",
+      "score": "1D: Sequence becomes melody · 1 voice",
+      "tension": "8 / 100",
+      "distance": null,
+      "clip_type": "chapter"
+    },
+    {
+      "name": "03-2d",
+      "sha256": "77af761fda053320e632b8ed61c7f7016cad9ac5726f6be930dafe740f29c7e8",
+      "chapter": "Chapter 3 of 6  ·  2D learning lens",
+      "uiTitle": "Find local patterns",
+      "score": "2D: Local patterns become two voices · 2 voices",
+      "tension": "14 / 100",
+      "distance": null,
+      "clip_type": "chapter"
+    },
+    {
+      "name": "04-3d",
+      "sha256": "eadb094ac9b27405676a532a47cfc7fe615e66e2e220a18207a6d0bd457fb6b6",
+      "chapter": "Chapter 4 of 6  ·  3D learning lens",
+      "uiTitle": "Shape becomes context",
+      "score": "3D: Tertiary interactions become harmony · 3 voices",
+      "tension": "18 / 100",
+      "distance": null,
+      "clip_type": "chapter"
+    },
+    {
+      "name": "05-4d-open",
+      "sha256": "e2fa1d123831c48fe365c5b5d69b140479bfd4fffd538cb725359538388c0deb",
+      "chapter": "Chapter 5 of 6  ·  4D learning lens",
+      "uiTitle": "Now let the relationship move",
+      "score": "4D: Conformational switching changes the harmony · 4 voices",
+      "tension": "12 / 100",
+      "distance": "8.019",
+      "clip_type": "chapter"
+    },
+    {
+      "name": "06-4d-cross",
+      "sha256": "3664cabd5cc1c675ebec7ea0d228fc2ddf4ed648d781945c5bd07c390efe11f0",
+      "chapter": "Chapter 5 of 6  ·  4D learning lens",
+      "uiTitle": "Now let the relationship move",
+      "score": "4D: Conformational switching changes the harmony · 4 voices",
+      "tension": "89 / 100",
+      "distance": "4.630",
+      "clip_type": "chapter"
+    },
+    {
+      "name": "07-m",
+      "sha256": "3321b4c1d64662cc0cf331069b3790230477421ee46a718386769441b6da5506",
+      "chapter": "Chapter 6 of 6  ·  M learning lens",
+      "uiTitle": "Look across scales and senses",
+      "score": "M: Multiscale ensemble · 5 voices",
+      "tension": "23 / 100",
+      "distance": null,
+      "clip_type": "chapter"
+    },
+    {
+      "name": "08-outro",
+      "sha256": "1c1e36d099b886973ccd47e5c2c71a93f5551297bd5f0397a68a569ef802ed3a",
+      "chapter": "Chapter 6 of 6  ·  M learning lens",
+      "uiTitle": "Look across scales and senses",
+      "score": "M: Multiscale ensemble · 5 voices",
+      "tension": "23 / 100",
+      "distance": null,
+      "clip_type": "outro"
+    }
+  ],
+  "audio_sha256": "45e18086203db39bd11bc560981cccd4031aefd23d895ad9d8e84c9d6a21caaf",
+  "physical_user_test": "NOT_TESTED",
+  "signature": "NOT_SIGNED",
+  "merkle_mmr": "NOT_COMMITTED"
+}

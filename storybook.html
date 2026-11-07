@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FoldSense — Living Storybook · review prototype</title>
+<style>
+:root{color-scheme:light;--ink:#132b42;--paper:#fffaf0;--panel:#fffef9;--cream:#f3e9d1;--muted:#516576;--gold:#bd740d;--blue:#155eb0;--green:#16735b;--alert:#9b2d23;--line:#dad2c0;--shadow:0 17px 48px #17344a21;--focus:#e67a21}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#dbe9ed;color:var(--ink);font:16px/1.45 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,select{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:4px solid var(--focus);outline-offset:3px}button:disabled{opacity:.42;cursor:not-allowed}
+.container{max-width:940px;margin:auto;background:var(--paper);min-height:100vh;box-shadow:0 0 60px #152f4525}header{background:#102f46;color:#fff;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px clamp(16px,4vw,32px)}.logo{font-weight:860;letter-spacing:-.055em;font-size:1.48rem}.edition{font-size:.69rem;letter-spacing:.14em;text-transform:uppercase;color:#b5ddec}.chip{font-size:.7rem;border:1px solid #9ebbd1;padding:6px 9px;border-radius:30px;color:#d5ecf8}
+main{padding:clamp(14px,4vw,38px)}.eyebrow{color:var(--green);font-weight:800;font-size:.77rem;letter-spacing:.17em;text-transform:uppercase}.h1{font-family:Georgia,serif;font-weight:700;line-height:1.04;font-size:clamp(2.3rem,8vw,4.4rem);letter-spacing:-.04em;margin:14px 0}.lead{font-size:1.08rem;color:#3e5265;max-width:590px}.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.section-title{font-size:1.1rem;font-weight:760;margin:26px 0 9px}.choice{display:block;width:100%;min-height:74px;text-align:left;padding:13px 14px;background:var(--panel);border:2px solid var(--line);border-radius:14px;color:var(--ink);margin:9px 0}.choice:hover,.choice[data-selected="true"]{border-color:var(--blue);background:#e9f5ff}.choice strong{display:block;font-size:1.02rem}.choice small{color:var(--muted);display:block;margin-top:5px;font-size:.79rem}.btn{min-height:52px;min-width:48px;border:2px solid var(--ink);border-radius:12px;background:var(--ink);color:white;padding:10px 18px;font-weight:760}.btn.alt{background:transparent;color:var(--ink)}.btn.accent{background:var(--blue);border-color:var(--blue)}.btn.tactile{background:#f5bd59;color:#2a240d;border-color:#ad772b}.btn.ghost{background:var(--paper);color:var(--ink);border-color:var(--line)}.action-group{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.muted{color:var(--muted)}.small{font-size:.78rem}.panel{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:17px}.note{background:#e6f4f2;padding:12px 14px;border-left:4px solid var(--green);border-radius:5px;margin:14px 0}.warn{background:#fff3e9;padding:10px 13px;border-left:4px solid var(--alert);border-radius:5px;margin:12px 0}.reading{font-size:1.1rem;max-width:56ch}.progress{display:flex;gap:6px;margin:12px 0 20px}.progress span{flex:1;background:#d9dbd7;height:6px;border-radius:20px}.progress span.current{background:var(--blue)}.page-label{font:800 .72rem ui-sans-serif,system-ui;letter-spacing:.14em;color:var(--green);text-transform:uppercase}.spread{border-radius:24px;padding:20px;background:linear-gradient(128deg,#fff7df 0%,#fffefc 56%,#eaf6f6 100%);border:1px solid #e5dcc8;box-shadow:var(--shadow)}.spread h2{font:700 clamp(1.75rem,6vw,2.5rem)/1.08 Georgia,serif;margin:9px 0}.art{border:1px solid #ccd5d8;border-radius:20px;background:radial-gradient(circle at 60% 28%,#e8fbff,#e1f0f1 52%,#cddde5);overflow:hidden;margin:18px 0;position:relative;min-height:250px;display:flex;align-items:center;justify-content:center}.art svg{display:block;width:100%;height:auto;max-height:325px;touch-action:pan-y;overflow:visible}.art .caption-art{position:absolute;bottom:9px;left:14px;font-size:.67rem;background:#ffffffe5;padding:5px 9px;border-radius:8px;font-weight:700}.dim{font-weight:900;color:var(--green);font-size:1rem}.next-bar{position:sticky;bottom:0;z-index:5;background:#fffaf0f2;backdrop-filter:blur(9px);padding:12px 0;display:flex;gap:9px;box-shadow:0 -8px 18px #30435412}.next-bar .btn{flex:1}.event{border:2px solid var(--blue);padding:12px;border-radius:12px;background:#e8f2ff;margin:14px 0}.event.cross{border-color:var(--gold);background:#fff0c8}.event strong{display:block;font-size:1.1rem}.barline{display:flex;justify-content:space-between;align-items:center;gap:10px}.toggle-row{display:flex;align-items:center;gap:10px;min-height:52px;margin:8px 0}.toggle-row input{height:22px;width:22px;accent-color:var(--blue)}details{margin:14px 0;border:1px solid var(--line);border-radius:11px;padding:10px 12px}summary{cursor:pointer;font-weight:760;min-height:36px}.status{font:700 .75rem ui-monospace,monospace;color:#405968;overflow-wrap:anywhere}.divider{border-top:1px solid var(--line);margin:18px 0}.tag{display:inline-block;border:1px solid #97acb0;border-radius:8px;padding:3px 7px;font-size:.69rem;font-weight:800;letter-spacing:.05em}.watch{background:#233e4c;color:#f3fff8;border-radius:13px;padding:12px 14px}.watch b{display:block}.question{padding:13px;border-radius:14px;border:1px solid #a6cbbd;background:#edf8f5}.question .btn{margin-top:7px;font-size:.85rem}.quiz-out{font-size:.87rem}.receipt{font-size:.68rem;word-break:break-all}.hidden{display:none!important}.disc{color:#a85815;font-weight:700}.levelmark{display:inline-block;background:#183f60;color:#fff;padding:4px 10px;border-radius:10px;font-weight:750;margin-right:6px}.readout{font:900 2.6rem ui-monospace,monospace;letter-spacing:-.08em;color:#194a69}.readout.cross{color:#a45804}.size-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.size-controls select{min-height:48px;border:2px solid #83979d;border-radius:10px;background:white;padding:5px 12px;color:var(--ink)}.lesson-card{border:1px solid var(--line);border-radius:15px;padding:13px;background:#fff;margin-top:9px}.lesson-card b{display:block}.print-ref{font-size:.75rem;color:var(--muted);margin-top:15px}
+@media(max-width:640px){.two{grid-template-columns:1fr}.h1{font-size:2.65rem}.spread{padding:13px}.art{min-height:200px;margin:13px 0}.next-bar{margin:0 -14px;padding:12px 14px}.logo{font-size:1.28rem}.chip{display:none}.panel{padding:13px}.readout{font-size:2.15rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@media(prefers-contrast:more){:root{--line:#4b5963;--muted:#1e3343}button,.choice{border-width:3px}}
+
+.music-panel{border:2px solid #345e7e;border-radius:16px;padding:15px;background:#edf5fa;margin:12px 0 17px}
+.music-panel h3{font-size:1.16rem;margin:4px 0 5px}
+.music-panel .musical-caption{font-size:.9rem;color:#294d63;margin:7px 0 10px}
+.music-surface{display:flex;gap:8px;align-items:end;min-height:67px;margin:9px 0 12px;border-radius:11px;padding:7px;background:#fff}
+.music-voice{flex:1;min-width:9px;background:#2584a0;border:2px solid #155574;border-radius:7px 7px 3px 3px;min-height:8px;transition:height .16s ease}
+.music-voice.tension{background:#c16c21;border-color:#8d3912}
+.music-voice[aria-label]{position:relative}
+.music-meter{height:14px;border:1px solid #7d9eac;border-radius:20px;background:#dae6ee;overflow:hidden;margin:6px 0}
+.music-meter>div{height:100%;background:linear-gradient(90deg,#2d8b98,#c37a1f);transition:width .16s ease}
+.music-control{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.music-control>.btn{flex:1;min-width:110px}
+.music-panel label{font-weight:650;font-size:.87rem}
+.music-panel select{display:block;max-width:100%;min-height:46px;background:white;border:2px solid #7c9daf;border-radius:8px;padding:5px 10px;color:#17364b}
+@media(prefers-reduced-motion:reduce){.music-voice,.music-meter>div{transition:none}}
+</style>
+</head>
+<body>
+<div class="container"><header><div><div class="logo">FoldSense<span style="color:#f6b95b">.</span></div><div class="edition">A living protein storybook</div></div><span class="chip">DRAFT FOR REVIEW · NOT DEPLOYED</span></header><main>
+<section id="setup" aria-labelledby="setup-title">
+  <p class="eyebrow">A small interactive science adventure</p><h1 class="h1" id="setup-title">A molecule is<br>more than a line.</h1>
+  <p class="lead">Turn six pages to explore how a chain of amino acids becomes a shape, and why changing relationships can matter. You choose the story and how to experience it.</p>
+  <div class="two"><section><h2 class="section-title">First, choose your experience</h2><div id="access-options" role="group" aria-label="Experience preferences"></div><p class="small muted">No diagnosis or account required. Change these choices later.</p></section><section><h2 class="section-title">What would you like to explore?</h2><div id="path-options" role="group" aria-label="Learning question"></div></section></div>
+  <div class="note small" id="detected" role="status">Checking optional browser capabilities. Your settings do not reveal or establish a disability.</div>
+  <div class="action-group"><button id="start" class="btn accent">Open my story →</button></div>
+  <p class="print-ref">All diagrams and trajectory values are synthetic illustrations. No protein structure prediction, measured folding trajectory, model inference, or watch connection is claimed.</p>
+</section>
+<section id="reader" class="hidden" aria-labelledby="reader-title">
+  <div class="barline"><span class="eyebrow" id="trail">YOUR PATH</span><button class="btn ghost" id="change" type="button">Change path</button></div>
+  <div class="progress" id="progress" aria-label="Chapter progress"></div>
+  <article class="spread" aria-live="off">
+    <div class="page-label" id="page-label">Chapter 1</div><h2 id="reader-title" tabindex="-1">One residue</h2>
+    <p class="reading" id="story">An amino acid is one building block.</p>
+    <div class="art"><svg id="molecule" viewBox="0 0 660 350" role="img" aria-label="Synthetic teaching diagram of amino acid structural levels"></svg><span class="caption-art" id="art-caption">Conceptual illustration</span></div>
+
+    <section class="music-panel" aria-label="Molecular music learning layer">
+      <div class="page-label">Listen to the levels · original generative teaching music</div>
+      <h3 id="music-title">0D: a single note</h3>
+      <p id="music-description" class="musical-caption">One residue, one note. Added structure will introduce independent musical voices.</p>
+      <div class="music-surface" id="music-score" role="img" aria-label="One musical voice; melodic complexity rises with chapter level"></div>
+      <div class="barline"><span class="small" id="music-tension-label">Harmonic tension · no switching event</span><b id="music-tension-value">0 / 100</b></div>
+      <div class="music-meter" role="meter" aria-label="Educational harmonic tension, not measured protein stability" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="music-tension-meter"><div id="music-tension-fill" style="width:0%"></div></div>
+      <p class="small muted" id="music-note-caption">Score: C4 · 261.63 Hz. Musical tension is an illustrative encoding, not a protein stability or folding score.</p>
+      <div class="music-control"><button class="btn accent" id="play-music">▶ Play this level</button><button class="btn alt" id="stop-music">■ Stop sound</button></div>
+      <details><summary>Choose musical instrument and playback</summary>
+        <div class="two" style="margin:8px 0"><label for="instrument">Instrument / timbre<select id="instrument"><option value="bell">Soft bell</option><option value="strings">Warm strings</option><option value="pulse">Soft electronic pulse</option></select></label><label for="music-tempo">Pace<select id="music-tempo"><option value="slow">Slow and clear</option><option value="medium">Moderate</option></select></label></div>
+        <label class="toggle-row"><input type="checkbox" id="music-follow"> Follow page turns and frame steps after I enable sound</label>
+        <p class="small muted">Manual playback is always available. No audio starts on page load; musical output is optional and never replaces text or haptic information. Music is synthesized locally in the browser.</p>
+      </details>
+      <p class="status" role="status" id="music-play-status" aria-live="polite">Sound not requested. Physical hearing NOT_TESTED.</p>
+    </section>
+    <div id="distance-area" class="event hidden"><div class="barline"><span class="small">A–B distance · demo units</span><span class="tag">Threshold 5.0</span></div><div id="distance" class="readout">8.02</div><span id="cross-note">Illustrative toy trajectory</span><div class="action-group"><button class="btn accent" id="step">Advance time one frame →</button><button class="btn ghost" id="restart-time">Restart motion</button></div></div>
+    <div id="qa-area" class="question hidden"><b>Quick check: if two marked residues move closer, what can we conclude?</b><div class="action-group"><button class="btn alt" id="answer-correct">Their distance changed</button><button class="btn alt" id="answer-wrong">The entire protein folded</button></div><p id="answer-note" class="quiz-out" role="status"></p></div>
+    <div id="cue-status" class="status" role="status" aria-live="polite">Event cues not requested.</div>
+  </article>
+  <div class="next-bar" aria-label="Story navigation"><button class="btn ghost" id="back">← Previous</button><button class="btn accent" id="next">Turn the page →</button></div>
+  <details><summary>Customize sound, narration, and haptics</summary><div class="panel">
+    <label class="toggle-row"><input id="haptics" type="checkbox"> Request phone vibration on events</label>
+    <label class="toggle-row"><input id="sound" type="checkbox"> Request musical sound cues</label>
+    <div class="action-group"><button class="btn alt" id="speak">Narrate this page</button><button class="btn alt" id="stop-speak">Stop speaking</button><button class="btn tactile" id="try-vibration">Try a vibration</button></div><p class="small muted">Web API acceptance is not proof that you heard or felt the cue. The phone vibrates, not the S Pen.</p>
+  </div></details>
+  <details><summary>Evidence and user observations</summary><div class="panel"><p class="small muted">Human-reported observations remain distinct from requested software cues.</p>
+    <label>Did you physically feel the vibration? <select id="felt"><option value="NOT_TESTED">Not tested / unknown</option><option value="HUMAN_REPORTED_YES">Yes</option><option value="HUMAN_REPORTED_NO">No</option></select></label>
+    <p></p><label>Did you hear the narrated or musical sound? <select id="heard"><option value="NOT_TESTED">Not tested / unknown</option><option value="HUMAN_REPORTED_YES">Yes</option><option value="HUMAN_REPORTED_NO">No</option></select></label>
+    <p class="small muted">The diagram is controlled with a pointer, finger, or S Pen contact. Actual S Pen pointerType: <strong id="pointer">NOT_TESTED</strong></p>
+    <button class="btn alt" id="download">Download local JSON session record</button><p class="receipt">Receipt signing: NOT_SIGNED · MMR: NOT_COMPUTED</p>
+  </div></details>
+  <div class="watch"><b>⌚ Watch companion</b><p class="small">The same story event could be mirrored as a simple watch card and vibration pattern. Actual Galaxy Watch Ultra2 connection: <strong>NOT_CONNECTED</strong>. Native Wear OS companion is a future adapter, not required for this review.</p></div>
+  <p class="print-ref">0D–M is a <em>learning lens</em>, not a claim of physical dimensionality. Secondary and quaternary structures are shown schematically; this prototype does not reconstruct experimentally validated ubiquitin assemblies.</p>
+</section>
+</main></div>
+<script>
+(()=>{"use strict";
+const profiles={all:{title:"See · hear · feel",desc:"Keep all channels optional",audio:false,haptic:false},vision:{title:"I rely less on vision",desc:"Large text and optional narration + touch",audio:false,haptic:true},hearing:{title:"I rely less on hearing",desc:"Readable captions and optional touch",audio:false,haptic:true},combined:{title:"I rely less on vision and hearing",desc:"Practice touch patterns; readable text for assistive tools",audio:false,haptic:true}};
+const paths={sequence:{title:"Follow the sequence",desc:"What can one amino acid become?",focus:"sequence"},shape:{title:"Explore the shape",desc:"Why do proteins fold into forms?",focus:"shape"},motion:{title:"Explore movement",desc:"What changes as residues approach?",focus:"motion"}};
+const chapters=[{level:"0D",title:"Meet one building block",story:"Start with one amino acid. It is a small chemical building block, not a zero-dimensional object. Tap the bead to inspect it."},{level:"1D",title:"Connect a sequence",story:"A protein begins with a particular order of amino acids, called its primary structure. Different sequences can favor different interactions."},{level:"2D",title:"Find local patterns",story:"Sections of a chain may form helices or sheets, while other regions remain flexible or disordered. This is a schematic secondary-structure view."},{level:"3D",title:"Shape becomes context",story:"Local segments interact in three-dimensional space. Tertiary structure describes the overall arrangement of a single polypeptide; structure and dynamics influence function."},{level:"4D",title:"Now let the relationship move",story:"Watch a synthetic two-bead distance change over time. Crossings cue sound or vibration when enabled. One distance is not proof that an entire protein has folded."},{level:"M",title:"Look across scales and senses",story:"Connect residue, sequence, local patterns, folded chains and time. Quaternary structure involves multiple polypeptide subunits, where applicable. Learn through a picture, text, optional audio or touch."}];
+const routeLines={
+ sequence:["Your focus: identify one residue before joining a chain.","Your choice emphasizes the order of residues along the chain.","Your page emphasizes a local sheet as one possible motif, not a prediction from this sequence.","Follow the same sequence as its local segments become spatially close.","Your frame shows a distance between two specifically selected toy beads.","Your learning lens connects the sequence to the broader organization."],
+ shape:["Your focus: discover how one building block can contribute to shape.","Order is the starting point for structural possibilities.","Your page emphasizes an illustrative helix as one possible local motif.","Your page emphasizes the overall tertiary arrangement.","The same toy crossing can be viewed as a geometric relationship, not proof of a fold.","Your learning lens combines local and global structure."],
+ motion:["Your focus: ask what changes when building blocks move.","Sequence identities remain fixed while geometry can change.","Your page adds a motion arrow to a schematic local motif.","Your page highlights conformational movement; no dynamics have been measured here.","Step the toy trajectory to see when a distance crosses its threshold.","Your learning lens adds time without redefining quaternary structure."]
+};
+// Exact A and B positions from an independently inspected FoldSense illustrative fixture; no physiological interpretation.
+const frames=[[2,0,0,9.52,2.74,.5],[2,0,0,8.81,2.89,.5],[2,0,0,7.93,2.89,.5],[2,0,0,7.07,2.81,.5],[2,0,0,6.41,2.76,.5],[2,0,0,5.77,2.64,.5],[2,0,0,5.23,2.52,.5],[2,0,0,5.32,2.89,.5],[2,0,0,5.81,3.68,.5],[2,0,0,6.16,4.46,.5],[2,0,0,5.09,3.68,.5],[2,0,0,4.53,3.35,.5]];
+const $=id=>document.getElementById(id);const state={profile:"all",path:"sequence",ch:0,fi:0,access:false,logs:[],quiz:"NOT_TESTED",a11y:{felt:"NOT_TESTED",heard:"NOT_TESTED"},pointer:"NOT_TESTED"};
+function choices(){for(const [id,v] of Object.entries(profiles)){const b=document.createElement('button');b.className='choice';b.type='button';b.setAttribute('aria-pressed',String(id===state.profile));b.dataset.selected=String(id===state.profile);b.innerHTML='<strong>'+v.title+'</strong><small>'+v.desc+'</small>';b.addEventListener('click',()=>{state.profile=id;choicesRefresh()});$('access-options').append(b)}for(const [id,v] of Object.entries(paths)){const b=document.createElement('button');b.className='choice';b.type='button';b.setAttribute('aria-pressed',String(id===state.path));b.dataset.selected=String(id===state.path);b.innerHTML='<strong>'+v.title+'</strong><small>'+v.desc+'</small>';b.addEventListener('click',()=>{state.path=id;choicesRefresh()});$('path-options').append(b)}}
+function choicesRefresh(){[...$('access-options').children].forEach((b,i)=>{const active=Object.keys(profiles)[i]===state.profile;b.dataset.selected=String(active);b.setAttribute('aria-pressed',String(active))});[...$('path-options').children].forEach((b,i)=>{const active=Object.keys(paths)[i]===state.path;b.dataset.selected=String(active);b.setAttribute('aria-pressed',String(active))})}
+function detected(){const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const contrast=matchMedia('(prefers-contrast: more)').matches;const vib=typeof navigator.vibrate==='function';$('detected').textContent='Browser hints: reduced motion '+(reduced?'preferred':'not requested')+' · higher contrast '+(contrast?'requested':'not signaled')+' · vibration API '+(vib?'available':'unavailable')+'. These are capabilities/preferences, not diagnoses. Device text size, screen-reader status and watch pairing are UNKNOWN.'}
+function point(x,y){return [x,y]};function line(points,color,width=8){return '<polyline points="'+points.map(p=>p.join(',')).join(' ')+'" fill="none" stroke="'+color+'" stroke-width="'+width+'" stroke-linecap="round" stroke-linejoin="round"/>'}
+function circle(x,y,r,fill,label,outline='#fafcfb'){return '<circle role="button" tabindex="0" data-bead="'+label+'" aria-label="Select '+label+'" cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill+'" stroke="'+outline+'" stroke-width="3" />'}
+function helix(){let p=[];for(let i=0;i<43;i++){const x=76+i*12.2,y=177+Math.sin(i*.6)*56;p.push(point(x,y))}return line(p,'#196a99',12)+p.filter((_,i)=>i%5===0).map(([x,y],i)=>circle(x,y,13,i%2?'#e5a34d':'#26797c','helix bead '+(i+1))).join('')}
+function sheet(){let s='';for(let i=0;i<4;i++){let y=83+i*62;s+=line([point(i%2?540:90,y),point(i%2?90:540,y)],i%2?'#267f9f':'#2d729b',12);s+=line([point(540,y),point(555,y+30),point(540,y+62)],'#e2aa59',3)}return s}
+function shape(){let pts=[];for(let i=0;i<35;i++){const t=i/34*Math.PI*5.1;const r=130-2.8*i;pts.push(point(330+Math.cos(t)*r,174+Math.sin(t)*r*.74))}return line(pts,'#12618b',11)+pts.filter((_,i)=>i%5===0).map(([x,y],i)=>circle(x,y,13,i%2?'#de9c55':'#2d9c9b','fold bead '+(i+1))).join('')}
+function sequence(){const pts=Array.from({length:10},(_,i)=>point(72+i*57,180+Math.sin(i*.85)*27));return line(pts,'#638ea0',9)+pts.map(([x,y],i)=>circle(x,y,20,i%2===0?'#1c7594':'#e9a342','amino acid '+(i+1))).join('')}
+function fragment(){return circle(330,174,35,'#e7a743','amino acid')+'<text x="330" y="238" text-anchor="middle" font-size="19" fill="#18445c" font-weight="bold">one residue</text>'}
+function time(){const f=frames[state.fi];const a=point(125,220),b=point(125+(f[3]-f[0])*57,220-(f[4]-f[1])*31);return line([a,b],state.fi>=5&&state.fi<=7?'#bd740d':'#155eb0',6)+circle(...a,26,'#174f77','residue A')+circle(...b,26,'#e8a13d','residue B')+'<text x="330" y="69" text-anchor="middle" fill="#24495c" font-size="22" font-weight="bold">Toy frame '+(state.fi+1)+' of 12</text>'}
+function multi(){return '<g transform="translate(-145,-10) scale(.76)">'+shape()+'</g><g transform="translate(174,15) scale(.7)">'+shape().replaceAll('#12618b','#c16e24').replaceAll('#2d9c9b','#d59c49')+'</g><text x="330" y="326" font-size="18" fill="#345667" text-anchor="middle">Illustrative subunit association · not ubiquitin evidence</text>'}
+function svg(){let content='',cap='';const c=state.ch;if(c===0){content=fragment();cap='Conceptual residue · 0D learning focus'}else if(c===1){content=sequence();cap='Linear sequence · primary structure'}else if(c===2){content=state.path==='sequence'?sheet():helix();if(state.path==='motion')content+='<path d="M480 76 Q559 110 514 162" fill="none" stroke="#a35e16" stroke-width="5" stroke-dasharray="10 5"/><path d="M516 162 l-4 -20 l22 8" fill="none" stroke="#a35e16" stroke-width="5"/>';cap=state.path==='sequence'?'Illustrative β-sheet · secondary structure':'Illustrative α-helix · secondary structure'}else if(c===3){content=shape();cap='Illustrative single-chain 3D schematic'}else if(c===4){content=time();cap='Measured coordinates? NO · illustrative 12-frame fixture'}else{content=multi();cap='Multiple chains · quaternary context (where applicable)'}$('molecule').innerHTML='<defs><radialGradient id="orb"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#cae6eb"/></radialGradient></defs><ellipse cx="330" cy="293" rx="240" ry="22" fill="#4b829d" opacity=".13"/>'+content;$('art-caption').textContent=cap;
+ $('molecule').querySelectorAll('[data-bead]').forEach(x=>{x.style.cursor='pointer';x.addEventListener('pointerdown',e=>{state.pointer=e.pointerType||'UNKNOWN';$('pointer').textContent=state.pointer;cue('SELECT_BEAD');$('cue-status').textContent='Selected '+x.getAttribute('data-bead')+' using pointerType '+state.pointer+'. Physical pen identity NOT independently verified.'});x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();cue('SELECT_BEAD');$('cue-status').textContent='Selected '+x.getAttribute('data-bead')+' by keyboard.'}})})}
+function distance(i=state.fi){let f=frames[i];return Math.sqrt((f[3]-f[0])**2+(f[4]-f[1])**2+(f[5]-f[2])**2)}
+function eventRecord(type,more={}){state.logs.push({event:type,chapter:chapters[state.ch].level,frame_id:'ubq-f'+String(state.fi).padStart(2,'0'),path:state.path,preference:state.profile,at:new Date().toISOString(),...more})}
+function cue(type){const patterns={PAGE:[45],SELECT_BEAD:[40],CROSS:[60,40,60],UNCROSS:[120],TEST:[80]};let vibration='NOT_REQUESTED',sound='NOT_REQUESTED';if($('haptics').checked){if(typeof navigator.vibrate==='function'){try{vibration=navigator.vibrate(patterns[type]||[45])?'API_ACCEPTED_PHYSICAL_UNKNOWN':'API_REJECTED'}catch{vibration='API_EXCEPTION'}}else{vibration='NOT_SUPPORTED'}}if($('sound').checked&&!$('music-follow').checked){try{let Audio=window.AudioContext||window.webkitAudioContext;if(Audio){const ctx=new Audio();const osc=ctx.createOscillator();const gain=ctx.createGain();osc.frequency.value=type==='CROSS'?440:660;gain.gain.value=.045;osc.connect(gain).connect(ctx.destination);osc.start();osc.stop(ctx.currentTime+.13);osc.onended=()=>ctx.close();sound='WEB_AUDIO_REQUESTED_HUMAN_UNKNOWN'}else sound='NOT_SUPPORTED'}catch{sound='ERROR'}}eventRecord(type,{vibration,sound});$('cue-status').textContent='Cue: '+type+' · vibration '+vibration+' · sound '+sound+'. Physical perception requires observer confirmation.'}
+
+// FoldSense music v2: ORIGINAL, deterministic pedagogical motifs; never claims physical protein stability.
+// 0D = one residue and pitch, 1D = sequence melody, 2D = layered motifs,
+// 3D = spatial harmony, 4D = time-varying intervals driven by toy distance,
+// M = multiscale/polyphonic context. These are learning lenses, not physical dimensions.
+const MUSIC_BASE=261.625565; // C4 reference; user can choose synthesized timbre.
+const MUSIC_CHAPTERS=[
+ {name:'One note',voices:1,intervals:[0],steps:1,caption:'A single amino-acid teaching focus gets a single sustained note.'},
+ {name:'Sequence becomes melody',voices:1,intervals:[0,2,4,7,5,9,7,4],steps:8,caption:'A toy sequence of eight abstract residue identities becomes eight successive notes; not actual ubiquitin BILN.'},
+ {name:'Local patterns become two voices',voices:2,intervals:[0,4,7,2,5,9],steps:6,caption:'A helix or sheet adds a counter-melody. These are conceptual motifs, not experimentally inferred interactions.'},
+ {name:'Tertiary interactions become harmony',voices:3,intervals:[0,4,7,12,9,5],steps:6,caption:'Spatial context adds a third harmonic voice; consonance is a musical metaphor, not a stability measurement.'},
+ {name:'Conformational switching changes the harmony',voices:4,intervals:[0,4,7,11,12,7],steps:6,caption:'Toy frame distance and threshold crossing modulate chord tension in real time.'},
+ {name:'Multiscale ensemble',voices:5,intervals:[0,4,7,12,16,9,5],steps:7,caption:'Multiple independent musical lines describe a conceptual multi-chain ensemble. Not observed ubiquitin quaternary structure.'}
+];
+const MUSIC_INSTRUMENT={bell:'sine',strings:'triangle',pulse:'square'};
+function clampMusic(n,min,max){return Math.min(max,Math.max(min,n))}
+function midiFrequency(semitones){return Number((MUSIC_BASE*Math.pow(2,semitones/12)).toFixed(3))}
+function musicPlan(chapter,frame=0){
+ const level=clampMusic(Math.trunc(chapter),0,5),meta=MUSIC_CHAPTERS[level];
+ const current=distance(frame),prev=distance(Math.max(0,frame-1));
+ const is4d=level===4,below=current<5,switched=is4d&&frame>0&&((prev<5)!==(current<5));
+ const velocity=frame>0?Math.abs(current-prev):0;
+ // A visible, reversible ARTISTIC mapping of numerical inputs, not energy/thermodynamics:
+ const tension=is4d?clampMusic(Math.round((below?52:12)+Math.min(20,velocity*20)+(switched?25:0)),0,100):[0,8,14,18,0,23][level];
+ const chord=level===0?[0]:level===1?[0]:level===2?[0,7]:level===3?[0,4,7]:level===4?(below?[0,1,6,10]:[0,4,7,12]):[0,4,7,12,16];
+ const ordered=meta.intervals.map((interval,i)=>level===1?interval:level===4?chord[i%chord.length]+(i>=chord.length?12:0):interval);
+ return {level,frame,voices:meta.voices,steps:meta.steps,intervals:ordered,chord,
+    frequencies:ordered.map(midiFrequency),tension,switched,distance:Number(current.toFixed(3)),
+    musicalClassification:level===4?(below?'Dissonant tension motif':'Consonant/open motif'):'Illustrative increasing polyphony',
+    source:'SYNTHETIC_DEMO_FIXTURE',isScientificStabilityScore:false};
+}
+let MUSIC_CTX=null;let MUSIC_VOICES=[];let MUSIC_GENERATION=0;
+function stopMusic(){MUSIC_GENERATION++;for(const item of MUSIC_VOICES){try{item.stop()}catch{}}MUSIC_VOICES=[];
+ if($('music-play-status'))$('music-play-status').textContent='Sound stopped or not playing. Human hearing NOT_TESTED.'}
+function noteOn(context,frequency,start,duration,level,amp,timbre){
+ const osc=context.createOscillator(),gain=context.createGain();
+ osc.type=MUSIC_INSTRUMENT[timbre]||'sine';osc.frequency.setValueAtTime(frequency,start);
+ gain.gain.setValueAtTime(0,start);gain.gain.linearRampToValueAtTime(amp,start+.016);
+ gain.gain.setValueAtTime(amp*.76,Math.max(start+.02,start+duration*.57));
+ gain.gain.linearRampToValueAtTime(.00001,start+duration);
+ osc.connect(gain).connect(context.destination);osc.start(start);osc.stop(start+duration+.015);
+ MUSIC_VOICES.push(osc);osc.addEventListener('ended',()=>{const i=MUSIC_VOICES.indexOf(osc);if(i>=0)MUSIC_VOICES.splice(i,1)});
+}
+async function playMusic(reason='USER_PREVIEW'){
+ // Audio is OPTIONAL for every profile: sensory presets must not prohibit an explicitly requested channel.
+ if(!($('sound').checked)){
+  $('music-play-status').textContent='Turn on Request musical sound cues in Customize sound before playback.';return false;
+ }
+ try{
+  const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)throw Error('WEB_AUDIO_NOT_SUPPORTED');
+  if(!MUSIC_CTX)MUSIC_CTX=new Audio();await MUSIC_CTX.resume();stopMusic();
+  const plan=musicPlan(state.ch,state.fi),now=MUSIC_CTX.currentTime+.04,
+       pace=$('music-tempo').value==='medium'?.145:.245,instrument=$('instrument').value,
+       amplitude=.075/Math.max(1,Math.sqrt(plan.voices));
+  // Single notes gradually layer into a polyphonic chord. Hard upper bound on oscillator count.
+  if(plan.level===0){noteOn(MUSIC_CTX,plan.frequencies[0],now,.49,plan.level,amplitude,instrument)}
+  else if(plan.level===1){plan.frequencies.slice(0,8).forEach((f,i)=>noteOn(MUSIC_CTX,f,now+i*pace,pace*.78,plan.level,amplitude,instrument))}
+  else{
+   const notes=plan.chord.slice(0,Math.min(5,plan.voices));
+   for(const [i,semitone] of notes.entries())noteOn(MUSIC_CTX,midiFrequency(semitone),now+(i*.055),pace*3.3,plan.level,amplitude,instrument);
+   if(plan.level>=4)noteOn(MUSIC_CTX,midiFrequency(plan.intervals[plan.intervals.length-1]),now+pace*.72,pace*.67,plan.level,amplitude*.55,instrument);
+  }
+  $('music-play-status').textContent=`${plan.voices} voice(s) ${instrument} synthesis requested · ${plan.musicalClassification}. Physical hearing NOT_TESTED.`;
+  eventRecord('MUSICAL_PREVIEW',{reason,level:plan.level,frame:plan.frame,voices:plan.voices,intervals:plan.intervals,tension:plan.tension,
+    source:'SYNTHETIC_NOT_MD',actual_sound_heard:'NOT_TESTED',instrument,pace});return true;
+ }catch(e){$('music-play-status').textContent='Playback unavailable: '+(e?.message||'AUDIO_FAILED');eventRecord('MUSIC_FAILED',{reason:String(e?.message||'ERROR')});return false}
+}
+function renderMusic(){
+ const plan=musicPlan(state.ch,state.fi),meta=MUSIC_CHAPTERS[state.ch];
+ $('music-title').textContent=`${chapters[state.ch].level}: ${meta.name} · ${plan.voices} ${plan.voices===1?'voice':'voices'}`;
+ $('music-description').textContent=meta.caption;
+ $('music-tension-label').textContent=state.ch===4?'Illustrative harmonic tension · switching-sensitive':'Illustrative harmonic tension · conceptual mapping';
+ $('music-tension-value').textContent=plan.tension+' / 100';
+ $('music-tension-meter').setAttribute('aria-valuenow',String(plan.tension));$('music-tension-fill').style.width=plan.tension+'%';
+ $('music-score').innerHTML=Array.from({length:plan.voices},(_,i)=>`<div class="music-voice ${plan.tension>=50?'tension':''}" style="height:${(19+(i*13)+(plan.tension*.18)).toFixed(1)}px" aria-label="voice ${i+1}"></div>`).join('');
+ $('music-score').setAttribute('aria-label',`${plan.voices} voice(s), artistic harmonic tension ${plan.tension} of 100, not a protein stability score`);
+ $('music-note-caption').textContent=`Score: ${plan.intervals.join(', ')} semitone intervals from C4 · ${plan.musicalClassification}. ${state.ch===4?'Demo A–B distance: '+plan.distance+' toy units. ':''}Consonance/dissonance is designed, not measured folding energy.`;
+}
+function maybeFollowMusic(){if($('music-follow').checked&&$('sound').checked)void playMusic('USER_ARMED_FOLLOW')}
+window.__FoldSenseMusicReview={musicPlan,MUSIC_CHAPTERS}; // Test-friendly pure functions, not external model APIs.
+
+function render(){const ch=chapters[state.ch];$('trail').textContent=profiles[state.profile].title+'  /  '+paths[state.path].title;$('page-label').textContent='Chapter '+(state.ch+1)+' of 6  ·  '+ch.level+' learning lens';$('reader-title').textContent=ch.title;$('story').textContent=ch.story+' '+routeLines[state.path][state.ch];$('progress').innerHTML=chapters.map((_,i)=>'<span class="'+(i===state.ch?'current':'')+'"></span>').join('');$('back').disabled=state.ch===0;$('next').textContent=state.ch===5?'Restart this story ↻':'Turn the page →';$('distance-area').classList.toggle('hidden',state.ch!==4);$('qa-area').classList.toggle('hidden',state.ch!==4);svg();renderMusic();if(state.ch===4)updateDistance();document.getElementById('reader-title').focus({preventScroll:true});}
+function updateDistance(){const d=distance();const crossed=d<5;$('distance').textContent=d.toFixed(3);$('distance').classList.toggle('cross',crossed);$('distance-area').classList.toggle('cross',crossed);$('cross-note').textContent=(crossed?'Below threshold · ':'At or above threshold · ')+ 'frame '+(state.fi+1)+' / 12. Threshold alone is not folding proof.';}
+function changePage(dir){if(state.ch===5&&dir===1){state.ch=0;state.fi=0;eventRecord('RESTART');}else state.ch=Math.max(0,Math.min(5,state.ch+dir));render();cue('PAGE');maybeFollowMusic()}
+$('start').addEventListener('click',()=>{state.ch=0;state.fi=0;state.quiz='NOT_TESTED';state.logs=[];$('haptics').checked=false;$('sound').checked=false;$('setup').classList.add('hidden');$('reader').classList.remove('hidden');eventRecord('START');render();scrollTo({top:0,behavior:'instant'})});
+$('change').addEventListener('click',()=>{stopMusic();$('reader').classList.add('hidden');$('setup').classList.remove('hidden');scrollTo({top:0,behavior:'instant'})});$('next').addEventListener('click',()=>changePage(1));$('back').addEventListener('click',()=>changePage(-1));
+$('step').addEventListener('click',()=>{if(state.fi>=11){$('cue-status').textContent='Final toy frame reached. Restart motion to replay.';return}const old=distance();state.fi++;const now=distance();const entered=old>=5&&now<5;const exited=old<5&&now>=5;updateDistance();svg();renderMusic();maybeFollowMusic();if(entered||exited)cue(entered?'CROSS':'UNCROSS');else{eventRecord('STEP',{distance:now});$('cue-status').textContent='Frame '+(state.fi+1)+': distance '+now.toFixed(3)+' demo units. No threshold event.'}});$('restart-time').addEventListener('click',()=>{state.fi=0;updateDistance();svg();renderMusic();eventRecord('RESET_MOTION')});
+$('answer-correct').addEventListener('click',()=>{state.quiz='CORRECT';$('answer-note').textContent='Correct. The toy distance changed, but that does not establish the overall fold or biological function.';eventRecord('QUIZ_CORRECT')});$('answer-wrong').addEventListener('click',()=>{state.quiz='INCORRECT';$('answer-note').textContent='Not necessarily. A single residue-pair distance cannot establish whether an entire protein folded.';eventRecord('QUIZ_INCORRECT')});
+$('speak').addEventListener('click',()=>{if(!window.speechSynthesis){$('cue-status').textContent='Speech API unsupported.';return}try{speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(chapters[state.ch].title+'. '+chapters[state.ch].story);u.lang='en-US';speechSynthesis.speak(u);eventRecord('NARRATION_REQUESTED',{physical:'HUMAN_HEARD_UNKNOWN'});$('cue-status').textContent='Speech requested. Human hearing NOT_TESTED; device inference and offline delivery UNKNOWN.'}catch{$('cue-status').textContent='Speech request FAILED.'}});$('stop-speak').addEventListener('click',()=>{if(window.speechSynthesis)speechSynthesis.cancel()});$('try-vibration').addEventListener('click',()=>cue('TEST'));$('play-music').addEventListener('click',()=>{if(!$('sound').checked)$('sound').checked=true;void playMusic()});$('stop-music').addEventListener('click',stopMusic);$('music-follow').addEventListener('change',e=>{if(e.target.checked)$('sound').checked=true;$('music-play-status').textContent=e.target.checked?'Sound will follow your future page/frame gestures after opt-in.':'Automatic follow off; manual previews remain available.'});
+$('felt').addEventListener('change',e=>{state.a11y.felt=e.target.value});$('heard').addEventListener('change',e=>{state.a11y.heard=e.target.value});
+$('download').addEventListener('click',()=>{const out={schema:'foldsense.storybook.review.v1',status:'REVIEW_PROTOTYPE',scientific_source:'FOLDSENSE_UBIQUITIN_TOY_FIXTURE_V0_1_0',scientific_truth:'SYNTHETIC_NOT_MD',selected_profile:state.profile,learning_path:state.path,chapter:chapters[state.ch].level,frame_id:'ubq-f'+String(state.fi).padStart(2,'0'),distance_demo_units:Number(distance().toFixed(3)),threshold_demo_units:5,quiz:state.quiz,human_observations:state.a11y,last_pointer_type:state.pointer,cues:state.logs,model_execution:'NOT_EXECUTED',musical_map:'foldsense.music.review.v2',last_music_plan:musicPlan(state.ch,state.fi),instrument:$('instrument').value,musical_context:'CREATIVE_SONIFICATION_NOT_BIOPHYSICAL_STABILITY',watch_connection:'NOT_CONNECTED',signature:'NOT_SIGNED',mmr:'NOT_COMPUTED'};const a=document.createElement('a'),blob=new Blob([JSON.stringify(out,null,2)+'\n'],{type:'application/json'});a.href=URL.createObjectURL(blob);a.download='foldsense-storybook-review-receipt.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
+choices();detected();
+})();
+</script>
+</body></html>

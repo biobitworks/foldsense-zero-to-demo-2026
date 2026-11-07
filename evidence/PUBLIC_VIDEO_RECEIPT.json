@@ -1,0 +1,32 @@
+{
+  "capture_frame_count": 9,
+  "capture_manifest_sha256": "12276a9a80a5a05c7341d0641f0319f0f8724961bb07beb0381ebb1fc71e1ef5",
+  "claim_ceiling": "SYNTHETIC_EDUCATIONAL_MULTIMODAL_STORYBOOK_NOT_MEASURED_PROTEIN_FOLDING",
+  "galaxy_watch": "NOT_CONNECTED",
+  "input_relation": "LOCAL_CHROMIUM_DOM_SCREEN_COMPOSITION_AND_ORIGINAL_ALGORITHMIC_SCORE",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "original_audio_hash": "45e18086203db39bd11bc560981cccd4031aefd23d895ad9d8e84c9d6a21caaf",
+  "phone_capture": "NOT_EXECUTED",
+  "physical_human_observation": "NOT_TESTED",
+  "predecessor_failure": "VIDEO_CAPTURE_R01_SCRIPT_ADVANCED_TO_M_BEFORE_4D_STEP",
+  "recorded_utc": "2026-11-07T23:34:29.612409+00:00",
+  "schema": "foldsense.z2d.public_video_release_receipt.v1",
+  "signing_state": "NOT_SIGNED",
+  "source_storybook_sha256": "0255eb3aa1e5c30f9d9c5e972ed5c9a6a627ba6d926784216ae9cdf5c36c77b1",
+  "successor_fix": "FRAME_4D_STEPS_EXECUTED_BEFORE_PAGE_ADVANCE",
+  "tests_failed": 0,
+  "tests_passed": 12,
+  "toy_frame_4d_after": {
+    "distance_demo_units": 4.63,
+    "tension": "89 / 100"
+  },
+  "toy_frame_4d_before": {
+    "distance_demo_units": 8.019,
+    "tension": "12 / 100"
+  },
+  "video_bytes": 1108999,
+  "video_codec": "H264_1280x720_AAC",
+  "video_duration_sec": 36,
+  "video_path": "video/foldsense-zero-to-demo-2026.mp4",
+  "video_sha256": "29ad714624a5cc386d8cc9100febac4b62411839cf10eee9ae1b8ffe266b42e4"
+}

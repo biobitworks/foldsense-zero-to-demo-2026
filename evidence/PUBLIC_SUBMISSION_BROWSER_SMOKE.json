@@ -1,0 +1,232 @@
+{
+  "schema": "foldsense.public_submission.browser_smoke.v1",
+  "html_sha256": "0255eb3aa1e5c30f9d9c5e972ed5c9a6a627ba6d926784216ae9cdf5c36c77b1",
+  "actual_device": "HEADLESS_CHROMIUM_MACOS_NOT_S26",
+  "screen": "384x688 CSS px",
+  "cases": [
+    {
+      "preset": "all",
+      "route": "sequence",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "all",
+      "route": "shape",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "all",
+      "route": "motion",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "vision",
+      "route": "sequence",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "vision",
+      "route": "shape",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "vision",
+      "route": "motion",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "hearing",
+      "route": "sequence",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "hearing",
+      "route": "shape",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "hearing",
+      "route": "motion",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "combined",
+      "route": "sequence",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "combined",
+      "route": "shape",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    },
+    {
+      "preset": "combined",
+      "route": "motion",
+      "status": "PASS",
+      "voices": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "after": {
+        "dist": "4.630",
+        "tension": "89 / 100",
+        "switched": true
+      }
+    }
+  ],
+  "summary": {
+    "passed": 12,
+    "failed": 0,
+    "physical_sound": "NOT_TESTED",
+    "watch": "NOT_CONNECTED"
+  },
+  "signed": "NOT_SIGNED",
+  "mmr": "NOT_COMMITTED"
+}

@@ -1,0 +1,328 @@
+{
+  "artifact_sha256": "8e2b5e42ed218936628aa91e375b81cafae8a7b2a38202565dc0b8eab7edef61",
+  "environment": "local Chromium Playwright; NOT phone/human audio",
+  "failures": [],
+  "schema": "foldsense.music.prototype.browser.test.v1",
+  "summary": {
+    "actual_watch": "NOT_CONNECTED",
+    "failed": 0,
+    "lovable_production": "NOT_DEPLOYED",
+    "modelling": "PURE_SYNTHETIC_MUSICAL_METAPHOR",
+    "passed": 12,
+    "physical_s26_audio": "NOT_TESTED"
+  },
+  "tests": [
+    {
+      "access": "all",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "sequence",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "all",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "shape",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "all",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "motion",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "vision",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "sequence",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "vision",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "shape",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "vision",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "motion",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "hearing",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "sequence",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "hearing",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "shape",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "hearing",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "motion",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "combined",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "sequence",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "combined",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "shape",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    },
+    {
+      "access": "combined",
+      "headless_audio_request_status": "4 voice(s) bell synthesis requested \u00b7 Dissonant tension motif. Physical hearing NOT_TESTED.",
+      "layout": {
+        "innerHeight": 688,
+        "innerWidth": 384,
+        "next": {
+          "bottom": 676,
+          "top": 605.625
+        },
+        "scrollWidth": 384
+      },
+      "levels": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "path": "motion",
+      "physical_audio": "NOT_TESTED",
+      "start_tension": 12,
+      "status": "PASS",
+      "switch_tension": 89
+    }
+  ]
+}
