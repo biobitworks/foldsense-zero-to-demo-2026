@@ -6,7 +6,9 @@
 
 ## Watch, play, inspect
 
-- **Video walkthrough:** [Watch the musical storybook demonstration](submission.html) ([MP4](video/foldsense-zero-to-demo-2026.mp4)).
+- **NEW judge-facing video (95 seconds):** [Watch the founder + real S26 Ultra walkthrough on Vercel](https://foldsense-s26-judges.vercel.app/) ([direct hosted MP4](https://foldsense-s26-judges.vercel.app/videos/foldsense-s26-judges.mp4); [GitHub release + checksum receipt](https://github.com/biobitworks/foldsense-zero-to-demo-2026/releases/tag/foldsense-founder-s26-judges-20261107)).
+- **Original 36-second musical storybook:** [Watch the original demonstration](index.html) ([direct original MP4](video/foldsense-zero-to-demo-2026.mp4)).
+- **FoldSense Touch Lab pitch and judges' FAQ:** [Current pitch/video](https://foldsense-touch-lab.lovable.app/pitch) · [Judges' FAQ](https://foldsense-touch-lab.lovable.app/judges-faq).
 - **Interactive storybook:** [Open the local-first HTML storybook](storybook.html).
 - **Published FoldSense Touch Lab:** https://foldsense-touch-lab.lovable.app/
 - **Public GitHub submission:** https://github.com/biobitworks/foldsense-zero-to-demo-2026
@@ -38,13 +40,19 @@ Musical voices increase 1 → 1 → 2 → 3 → 4 → 5 from 0D to M. In 4D, the
 | Galaxy Watch Ultra2 | Planned complementary Wear OS haptic/story receiver | **NOT_CONNECTED**, native watch app **NOT_IMPLEMENTED** |
 | Runway, Roblox, Minecraft | Exploratory visual/game references | **NOT_IMPLEMENTED**, no runtime dependence |
 
+### Judges' video update — November 7, 2026
+
+The user's 50.75-second front-camera presentation (original spoken audio) was combined with a short excerpt of the creative musical storybook and an automated screen-recording excerpt from the actual Samsung S26 Ultra. This produced a 95.005924-second H.264/AAC judge review cut. SHA-256 of final video: `be18286a9c688857eddf6d07054e4e46305355399c7d5f2fff2acdc57679acb3`. A [public release](https://github.com/biobitworks/foldsense-zero-to-demo-2026/releases/tag/foldsense-founder-s26-judges-20261107) contains the video and its source/output receipt.
+
+**Verification ceiling:** The phone screen excerpt used automated CDP touch rather than a physical S Pen gesture. Separate user observation reported S Pen contact working but earlier app music not heard and phone vibration not felt; post audio-routing correction human hearing/felt tests have not been repeated. The audio in the video is camera narration and edited artistic music, **not** confirmed audible browser sonification from the S26 speaker. The story uses synthetic data, not a folding prediction. Watch and ESMFold are not integrated.
+
 ### Demo video provenance
 
 The MP4 is a **screen-capture-derived, edited educational walkthrough** rendered from the actual offline storybook HTML in headless Chromium/Puppeteer, with an original algorithmically synthesized audio score matching the chapter mapping. It is **not** a live S26 recording, a demonstration of a watch connection, or a validated scientific folding trajectory. Source and script are in `scripts/`, and receipt under `evidence/`.
 
 ### Reproduce
 
-Serve the repository statically (`python3 -m http.server 8000`) and open `http://localhost:8000/storybook.html`. Use `submission.html` for the video and judge-friendly overview. Test scripts under `tests/` may require Playwright/Chromium.
+Serve the repository statically (`python3 -m http.server 8000`) and open `http://localhost:8000/storybook.html`. Use `index.html` for the original video and judge-friendly overview, or open the latest S26 Vercel judges site linked above. Test scripts under `tests/` may require Playwright/Chromium.
 
 ### Governance
 
